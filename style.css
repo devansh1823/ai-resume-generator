@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  background: #1b9cfc;
+}
+
+.wrapper {
+  width: 750px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.wrapper header {
+  font-size: 35px;
+  font-weight: 600;
+  padding: 20px 30px;
+  border-bottom: 1px solid #a5b1c2;
+  text-align: center;
+}
+
+.wrapper form {
+  margin: 35px 30px;
+}
+
+form .dbl-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.dbl-field .field {
+  height: 50px;
+  position: relative;
+  width: calc(100% / 2 - 13px);
+}
+
+.field input,
+.message .address {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid #a5b1c2;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 0 20px 0 50px;
+}
+
+.field input:focus,
+.message textarea:focus {
+  border: 2px solid #015aff;
+}
+
+.field input::placeholder,
+.message textarea::placeholder {
+  color: #a5b1c2;
+}
+
+.wrapper form i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 17px;
+  color: #a5b1c2;
+}
+
+form .message {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+form .message i {
+  top: 30px;
+  font-size: 20px;
+}
+
+.message .address {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 50px;
+  /* resize: none; */
+  padding: 15px 20px 0 50px;
+  min-height: 60px;
+  max-height: 150px;
+}
+
+.field input:focus ~ i,
+.message textarea:focus ~ i {
+  color: #015aff;
+}
+
+form .btnArea {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+
+form .btnArea button {
+  font-size: 20px;
+  border: 1px solid #015aff;
+  background: #fff;
+  cursor: pointer;
+  padding: 15px 25px;
+  color: #015aff;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+form .btnArea button:hover {
+  background: #015aff;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.btnArea span {
+  margin-left: 15px;
+  color: #015aff;
+}
+
+.btn {
+  position: relative;
+  left: 55.5%;
+}
+
+.btn2 {
+  position: relative;
+  left: 71%;
+}
+
+/* Form display management */
+.details {
+  display: block; /* Show first form by default */
+}
+
+.employment, .education, .skills {
+  display: none; /* Hide other forms initially */
+}
+
+.employment .db2 input {
+  padding: 0 20px 0 15px;
+}
+
+.desc {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid #a5b1c2;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 15px 20px 0 15px;
+  min-height: 300px;
+  max-height: 300px;
+  resize: none;
+}
+
+.skill {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid #a5b1c2;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 15px 20px 0 15px;
+  min-height: 100px;
+  max-height: 100px;
+  resize: none;
+}
+
+.dates {
+  display: flex;
+  width: 100%;
+}
+
+.start {
+  margin-right: 10px;
+}
+
+.db2 .field {
+  height: 50px;
+  position: relative;
+  width: calc(100% / 2 - 105px);
+}
+
+.range{
+    display: flex;
+}
+
+.skills .range .box {
+  border: 1px solid #a5b1c2;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s ease;
+}
+
+.skills .range .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(1, 90, 255, 0.3);
+}
+
+#skillLevelText {
+    transition: all 0.3s ease;
+    min-width: 120px;
+    display: inline-block;
+}
+
+.box:hover{
+    background-color: #015aff;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 450px;
+  }
+  .wrapper header {
+    text-align: center;
+  }
+  form .dbl-field {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .dbl-field .field {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .message textarea {
+    resize: none;
+  }
+  form .btnArea {
+    flex-direction: column;
+  }
+  .btnArea button {
+    width: 100%;
+  }
+  .btnArea span {
+    margin: 20px 0;
+    text-align: center;
+  }
+}
